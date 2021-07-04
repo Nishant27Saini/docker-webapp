@@ -13,11 +13,83 @@ function docker()
 }
 </script>
 
-Enter the docker command that you want to run: <input id='in1' /> 
-</br> 
-<button onclick="docker();">click here to run the entered docker command</button></br>
-   
-<br/>
-<pre>
-<div id='d1'>output comes here</div>
+
+
+
+
 </pre>
+<!DOCTYPE html>
+  <html>
+  <head>
+  	<title>Docker Doctor - A webapp for Docker</title>
+  	<style>
+
+body
+   {
+     margin:0px; background-color:#27a465; color:#f7f7f7; font-family:Arial, Helvetica, sans-serif;
+   }
+   #main
+   {
+     width:600px; height:260px; margin-left:auto; margin-right:auto; border-radius:5px; padding-left:10px; margin-top:100px;
+     border-top:3px double #f1f1f1; border-bottom:3px double #f1f1f1; padding-top:20px;
+   }
+   #main table
+   {
+     font-family:"Comic Sans MS", cursive;
+   } 
+  /* css code for textbox */
+  #main .tb
+  {
+    height:28px; width:230px; border:1px solid #27a465; color:#27a465; font-weight:bold; border-left:5px solid #f7f7f7; opacity:0.9;
+  }
+
+   /* css code for button*/
+   #main .btn
+   {
+    width:80px; height:32px; outline:none;  font-weight:bold; border:0px solid #27a465; text-shadow: 0px 0.5px 0.5px #fff;  
+    border-radius: 2px; font-weight: 600; color: #27a465; letter-spacing: 1px; font-size:14px; -webkit-transition: 1s; -moz-transition: 1s; transition: 1s;
+   }
+  
+   #main .btn:hover
+   {
+    background-color:#27a465; outline:none;  border-radius: 2px; color:#f1f1f1; border:1px solid #f1f1f1;
+   }
+
+
+</style>
+
+
+</head>
+
+	<body>
+	<!-- Main div code -->
+	<div id="main">
+	<div class="h-tag">
+	<h2>WelCome to the docker App</h2>
+	</div>
+	
+	
+	<table cellspacing="2" align="center" cellpadding="8" border="0">
+	<tr>
+	<td>Enter Docker Command that you want to run:</td>
+	<td><input type="text" placeholder="Enter docker command here" id="in1" class="tb" /></td>
+	</tr>
+	<tr>
+        <td></td>
+        <td>
+	<input type="submit" class="btn" onClick="docker();" />
+       
+	</tr>
+	</table>
+        
+	</div>
+  	
+	</div>
+	<!-- Main div ending here... -->
+        <pre>
+        
+        <div id='d1'  align="center">output of command  comes here</div>
+	</pre>
+    
+  </body>
+  </html>
